@@ -30,12 +30,16 @@
   </modules>
 
   <global>
+    <blocks>
+      <campaignmonitor>
+        <class>Fontis_CampaignMonitor_Block</class>
+      </campaignmonitor>
+    </blocks>
     <models>
       <campaignmonitor>
         <class>Fontis_CampaignMonitor_Model</class>
       </campaignmonitor>
     </models>
-    
     <events>
       <customer_save_before>
         <observers>
@@ -45,7 +49,7 @@
             <method>check_subscription_status</method>
           </fontis_campaignmonitor_observer>
         </observers>
-      </customer_save_before>     
+      </customer_save_before>
       <customer_delete_before>
         <observers>
           <fontis_campaignmonitor_observer_2>
@@ -54,7 +58,7 @@
             <method>customer_deleted</method>
           </fontis_campaignmonitor_observer_2>
         </observers>
-      </customer_delete_before>     
+      </customer_delete_before>
     </events>
 
     <rewrite>
